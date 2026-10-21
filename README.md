@@ -142,4 +142,4 @@ process is gone and which never reached `done` was abandoned by a killed run.
 
 ## Issues
 
-[View open issues](https://github.com/degory/ghul/issues?q=is%3Aopen+is%3Aissue+label%3Aghul-dashboard) or [raise a new one](https://github.com/degory/ghul/issues/new?labels=ghul-dashboard).
+[View open issues](https://github.com/ghul-lang/ghul/issues?q=is%3Aopen+is%3Aissue+label%3Aghul-dashboard) or [raise a new one](https://github.com/ghul-lang/ghul/issues/new?labels=ghul-dashboard).
