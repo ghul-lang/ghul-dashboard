@@ -10,7 +10,7 @@ namespace Dashboard is
     class Main is
         // Synchronous: an entry point has to return int or void, so the
         // collectors' tasks are driven from here rather than awaited.
-        entry(arguments: string[]) -> int static is
+        entry(arguments: ARRAY[string]) -> int static is
             let interval mut = 1000
             let once mut = false
 
