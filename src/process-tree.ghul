@@ -72,7 +72,7 @@ namespace Dashboard is
             fi
 
             for c in text do
-                if !char.is_digit(c) then
+                if !c.is_digit then
                     return false
                 fi
             od
