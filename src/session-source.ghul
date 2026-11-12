@@ -26,7 +26,7 @@ namespace Dashboard is
                 if c == '_' then
                     capitalize = true
                 elif capitalize then
-                    result.append(char.to_upper(c))
+                    result.append(c.to_upper())
                     capitalize = false
                 else
                     result.append(c)
