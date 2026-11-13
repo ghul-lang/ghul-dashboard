@@ -30,9 +30,9 @@ namespace Dashboard is
         render(snapshot: SNAPSHOT) -> Iterable[string] is
             let lines = LIST[string]()
 
-            let sessions = snapshot.sessions |> collect_list()
-            let runs = snapshot.runs |> collect_list()
-            let pull_requests = snapshot.pull_requests |> collect_list()
+            let sessions = snapshot.sessions |> LIST()
+            let runs = snapshot.runs |> LIST()
+            let pull_requests = snapshot.pull_requests |> LIST()
 
             let run_rows = get_run_rows(runs)
             let pull_request_rows = LAYOUT.get_capped(pull_requests.count, LAYOUT.maximum_pull_request_rows)
