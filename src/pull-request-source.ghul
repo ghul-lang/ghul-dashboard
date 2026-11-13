@@ -48,7 +48,7 @@ namespace Dashboard is
                 return _pull_requests
             fi
 
-            _pull_requests = PULL_REQUEST_ROWS.parse(output) |> collect_list()
+            _pull_requests = PULL_REQUEST_ROWS.parse(output) |> LIST()
             _fetched_at = now
 
             return _pull_requests
