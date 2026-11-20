@@ -1,5 +1,5 @@
 namespace Dashboard is
-    use System.Exception
+    use Ghul.Exception
 
     use Collections.Iterable
     use Collections.MutableList
@@ -18,7 +18,7 @@ namespace Dashboard is
         init() is si
 
         convert_name(name: string) -> string is
-            let result = System.Text.StringBuilder()
+            let result = Text.StringBuilder()
 
             let capitalize mut = false
 

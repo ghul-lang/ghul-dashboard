@@ -55,14 +55,14 @@ namespace Dashboard is
     class LINE_BUILDER is
         _width: int
         _used: int
-        _text: System.Text.StringBuilder
+        _text: Text.StringBuilder
 
         used: int => _used
         remaining: int => _width - _used
 
         init(width: int) is
             _width = width
-            _text = System.Text.StringBuilder()
+            _text = Text.StringBuilder()
         si
 
         // Returns whether the segment was added, so a caller can tell what the
@@ -114,7 +114,7 @@ namespace Dashboard is
             let full = steps / steps_per_column
             let remainder = steps % steps_per_column
 
-            let result = System.Text.StringBuilder()
+            let result = Text.StringBuilder()
 
             result.append("".pad_right(full, filled_character))
 
