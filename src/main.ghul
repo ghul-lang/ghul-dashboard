@@ -1,6 +1,6 @@
 namespace Dashboard is
     use Ghul.Pipes
-    use System.Exception
+    use Ghul.Exception
 
     use IO.Std
     use IO.Directory
@@ -186,7 +186,7 @@ namespace Dashboard is
                     fi
                 fi
 
-                System.Threading.Thread.sleep(poll)
+                Tasks.Thread.sleep(poll)
 
                 waited = waited + poll
             od
@@ -280,7 +280,7 @@ namespace Dashboard is
         si
 
         now() -> long static =>
-            System.DateTimeOffset.utc_now.to_unix_time_milliseconds()
+            Time.DateTimeOffset.utc_now.to_unix_time_milliseconds()
 
         write_usage() static is
             Std.write_line("usage: ghul-dashboard [--interval <seconds>] [--once]")

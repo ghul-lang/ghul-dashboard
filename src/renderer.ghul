@@ -63,7 +63,7 @@ namespace Dashboard is
         si
 
         render_header(lines: MutableList[string], system: SYSTEM?) is
-            let clock = SCREEN.dim(System.DateTime.now.to_string("HH:mm:ss"))
+            let clock = SCREEN.dim(Time.DateTime.now.to_string("HH:mm:ss"))
 
             if !system? then
                 lines.add("{SCREEN.bold("ghul")} {clock}")
@@ -121,13 +121,13 @@ namespace Dashboard is
         // Per-core cells give away a single pegged core that an average hides;
         // the busiest processes say what is doing it.
         render_cores_and_busiest(system: SYSTEM) -> string is
-            let cores = System.Text.StringBuilder()
+            let cores = Text.StringBuilder()
 
             for percent in system.core_percents do
                 cores.append(METER.core_cell(percent))
             od
 
-            let busiest = System.Text.StringBuilder()
+            let busiest = Text.StringBuilder()
 
             for load in system.top do
                 if busiest.length > 0 then
@@ -289,7 +289,7 @@ namespace Dashboard is
                     SCREEN.yellow(body)
                 fi
 
-            let detail = System.Text.StringBuilder()
+            let detail = Text.StringBuilder()
 
             detail.append("  {SCREEN.green("pass {run.passed}")}")
 

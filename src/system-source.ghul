@@ -41,7 +41,7 @@ namespace Dashboard is
             let since = now() - _previous_at
 
             if since < minimum_window_ms then
-                System.Threading.Thread.sleep(cast int(minimum_window_ms - since))
+                Tasks.Thread.sleep(cast int(minimum_window_ms - since))
             fi
 
             let result = SYSTEM()
@@ -196,6 +196,6 @@ namespace Dashboard is
         si
 
         now() -> long static =>
-            System.DateTimeOffset.utc_now.to_unix_time_milliseconds()
+            Time.DateTimeOffset.utc_now.to_unix_time_milliseconds()
     si
 si

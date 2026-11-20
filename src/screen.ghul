@@ -1,5 +1,5 @@
 namespace Dashboard is
-    use System.Exception
+    use Ghul.Exception
 
     use Collections.Iterable
 
@@ -77,7 +77,7 @@ namespace Dashboard is
         si
 
         paint(lines: Iterable[string]) is
-            let text = System.Text.StringBuilder()
+            let text = Text.StringBuilder()
 
             text.append("{escape}[H")
 
